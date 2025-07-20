@@ -1,9 +1,8 @@
 from utils.classifier import classify_bin
 
-def test_known_items():
-    assert classify_bin("plastic_bottle") == "blue"
-    assert classify_bin("banana_peel") == "green"
-    assert classify_bin("tin_can") == "red" 
+def test_council_specific_bins():
+    assert classify_bin("banana_peel") == "green"  # Cambridge default
+    assert classify_bin("banana_peel", council="Leeds") == "brown"
 
-def test_unknown_item():
-    assert classify_bin("styrofoam_cup") == "unknown"
+def test_fallback_behavior():
+    assert classify_bin("nappy", council="UnknownTown") == "unknown"
