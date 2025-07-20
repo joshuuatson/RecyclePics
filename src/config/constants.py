@@ -1,32 +1,26 @@
 # src/config/constants.py
-#addin in some regional dependancies
+
 COUNCIL_BIN_MAPPINGS = {
     "Cambridge": {
-        "plastic_bottle": "blue",
-        "plastic_tub": "blue",
-        "banana_peel": "green",
-        "apple_core": "green",
-        "tin_can": "blue",
-        "aluminium_foil": "blue",
-        "newspaper": "blue",
-        "cereal_box": "blue",
-        "glass_bottle": "green",
-        "jam_jar": "green",
-        "nappy": "black",
-        "styrofoam": "black",
+        "bottle": "blue",        # plastic or glass bottles → blue bin (simplified)
+        "banana": "green",       # assume peel
+        "apple": "green",        # assume core
+        "can": "blue",           # tin can
+        "cup": "black",          # assume disposable
+        "fork": "black",         # plastic fork
+        "spoon": "black",        # plastic spoon
+        "book": "blue",          # paper/card
+        "vase": "green",         # glass
     },
     "Leeds": {
-        "plastic_bottle": "green",
-        "plastic_tub": "green",
-        "banana_peel": "brown",
-        "apple_core": "brown",
-        "tin_can": "grey",
-        "aluminium_foil": "grey",
-        "newspaper": "blue",
-        "cereal_box": "blue",
-        "glass_bottle": "brown",
-        "jam_jar": "brown",
-        "nappy": "black",
-        "styrofoam": "black",
+        "bottle": "green",
+        "banana": "brown",
+        "apple": "brown",
+        "can": "grey",
+        "cup": "black",
+        "fork": "black",
+        "spoon": "black",
+        "book": "blue",
+        "vase": "brown",
     }
 }

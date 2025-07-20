@@ -13,3 +13,4 @@ def classify_bin(item_class: str, council: str = "Cambridge") -> str:
     bin_map = COUNCIL_BIN_MAPPINGS.get(council, {})
     
     return bin_map.get(item_class, "unknown")
+
