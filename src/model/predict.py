@@ -1,7 +1,8 @@
 #this runs the interface: loads the model and returns the detected objects
 from model.load_model import load_yolo_model
+from utils.classifier import classify_bin
 
-def predict_image(image_path, model=None, conf = 0.25):
+def predict_image(image_path, model=None, conf = 0.25, council = "Cambridge"):
     """
     Predict objects in an image using the YOLO model.
     
@@ -27,6 +28,8 @@ def predict_image(image_path, model=None, conf = 0.25):
         x1, y1, x2, y2 = map(int, box.xyxy.tolist()[0])
         w = x2 - x1
         h = y2 - y1
-        predictions.append((label, (x1, y1, w, h)))
+        bin_type = classify_bin(label, council)
+        conf_score = float(box.conf.item())
+        predictions.append((label, (x1, y1, w, h), bin_type, conf_score))
 
     return predictions
