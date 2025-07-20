@@ -1,0 +1,20 @@
+Planned next steps:
+
+1. Need a dummy classifier, and utilities working
+- e.g. get classify_bin() working
+2. Add image and loading sequence
+- load_image(image_path) should return some Torch tensor
+3. Try to use the YOLOv8 model and wrap in model/predict.py
+4. Integrate into main.py
+5. Remember to write tests as we go
+
+info for reference
+
+| Category          | Example Items            | Bin Colour (Typical)   |
+| ----------------- | ------------------------ | ---------------------- |
+| **Paper & Card**  | newspapers, cereal boxes | **Blue**               |
+| **Plastic**       | bottles, tubs, trays     | **Green** or **Blue**  |
+| **Glass**         | bottles, jars            | **Green** or **Brown** |
+| **Metal**         | cans, tins               | **Blue** or **Grey**   |
+| **Food Waste**    | scraps, peels            | **Brown**              |
+| **General Waste** | non-recyclables, nappies | **Black**              |

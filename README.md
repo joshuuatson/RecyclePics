@@ -10,3 +10,5 @@ python -m venv .venv
 pip install -r requirements.txt
 
 #run with: python -m src.RecyclingPics.main
+
+#general function: load image, run model, classify items, output bin suggestion
