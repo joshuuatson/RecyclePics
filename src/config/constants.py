@@ -1,26 +1,42 @@
 # src/config/constants.py
 
-COUNCIL_BIN_MAPPINGS = {
+MATERIAL_TO_BIN = {
     "Cambridge": {
-        "bottle": "blue",        # plastic or glass bottles → blue bin (simplified)
-        "banana": "green",       # assume peel
-        "apple": "green",        # assume core
-        "can": "blue",           # tin can
-        "cup": "black",          # assume disposable
-        "fork": "black",         # plastic fork
-        "spoon": "black",        # plastic spoon
-        "book": "blue",          # paper/card
-        "vase": "green",         # glass
+        "plastic": "blue",
+        "glass": "green",
+        "metal": "blue",
+        "paper": "blue",
+        "cardboard": "blue",
+        "food": "green",
+        "trash": "black",
+        "other": "black",  # default catch-all
     },
     "Leeds": {
-        "bottle": "green",
-        "banana": "brown",
-        "apple": "brown",
-        "can": "grey",
-        "cup": "black",
-        "fork": "black",
-        "spoon": "black",
-        "book": "blue",
-        "vase": "brown",
+        "plastic": "green",
+        "glass": "brown",
+        "metal": "grey",
+        "paper": "blue",
+        "cardboard": "blue",
+        "food": "brown",
+        "trash": "black",
+        "other": "black",
     }
 }
+
+
+LABEL_TO_MATERIAL = {
+    "bottle": "plastic",    # assuming PET plastic
+    "can": "metal",
+    "cup": "plastic",       # or "trash" for disposable
+    "book": "paper",
+    "vase": "glass",
+    "fork": "plastic",
+    "spoon": "plastic",
+    "banana": "trash",      # if it's the fruit
+    "apple": "trash",
+    "box": "cardboard",
+    "bag": "plastic",       # assuming shopping bag
+    "tv": "trash",          # general waste
+    # Add more as needed
+}
+

@@ -29,7 +29,7 @@ def draw_detections(image_path, detections, output_path = None):
 
         cv2.rectangle(img, (x, y), (x + w, y + h), color, 2)
         label_text = f"{label} -> {bin_color} ({conf:.2f})"
-        cv2.putText(img, label_text, (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 1, color, 3)
+        cv2.putText(img, label_text, (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, color, 2)
 
 
     if output_path:

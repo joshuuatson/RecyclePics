@@ -18,3 +18,6 @@ info for reference
 | **Metal**         | cans, tins               | **Blue** or **Grey**   |
 | **Food Waste**    | scraps, peels            | **Brown**              |
 | **General Waste** | non-recyclables, nappies | **Black**              |
+
+
+- have made new object to material mapping. now need to try to add light weight models to specify the material of each item
