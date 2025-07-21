@@ -23,7 +23,10 @@ def load_material_classifier(model_path, device):
 
     model = models.resnet50(pretrained=False)
     model.fc = nn.Linear(model.fc.in_features, 2)
-    model.load_state_dict(torch.load(model_path, map_location=device))
+
+    state_dict = torch.load(model_path, map_location=device, weights_only = False)
+
+    model.load_state_dict(state_dict)
     model.to(device)
     model.eval()
     return model

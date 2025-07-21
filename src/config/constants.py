@@ -20,23 +20,23 @@ MATERIAL_TO_BIN = {
         "food": "brown",
         "trash": "black",
         "other": "black",
+        "hazardous": "hazardous",
     }
 }
 
 
 LABEL_TO_MATERIAL = {
-    "bottle": "plastic",    # assuming PET plastic
-    "can": "metal",
-    "cup": "plastic",       # or "trash" for disposable
-    "book": "paper",
-    "vase": "glass",
-    "fork": "plastic",
-    "spoon": "plastic",
-    "banana": "trash",      # if it's the fruit
-    "apple": "trash",
-    "box": "cardboard",
-    "bag": "plastic",       # assuming shopping bag
-    "tv": "trash",          # general waste
-    # Add more as needed
+    "battery": "hazardous",         # hazardous waste, not recycled in normal bins
+    "biological": "food",       # organic waste
+    "brown-glass": "glass",
+    "green-glass": "glass",
+    "white-glass": "glass",
+    "cardboard": "cardboard",
+    "clothes": "other",         # could go to textile recycling, but not standard bin
+    "shoes": "other",           # same as above
+    "metal": "metal",
+    "paper": "paper",
+    "plastic": "plastic",
+    "trash": "trash"
 }
 
