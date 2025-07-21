@@ -15,3 +15,4 @@ tf-env/
 models/
 #include best_eco_sort_waste_pro_model.keras
 !models/best_eco_sort_waste_pro_model.keras
+!tflow_model_1.tflite
