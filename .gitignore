@@ -18,4 +18,4 @@ models/*
 
 # Except specific files
 !models/best_eco_sort_waste_pro_model.keras
-!models/tflow_model_1.tflite
+!models/tflow_model_1.tflite!tflow_model_1.tflite
